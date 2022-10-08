@@ -25,6 +25,7 @@
 
 @media (max-width:767px) {
     .result{
+        padding: 20px 0px;
         height: 50vh;
         width: 100vw;
     }

@@ -52,4 +52,9 @@
     .calculator .input-title--details {
         margin-top: 20px;
     }
+
+    .calculator .gender {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
 }
