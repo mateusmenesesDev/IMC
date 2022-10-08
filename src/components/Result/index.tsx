@@ -1,5 +1,10 @@
 import style from './Result.module.css'
-export const Result = ()=>{
+
+interface Props{
+    gender:string
+}
+export const Result = ({gender}:Props)=>{
+    const genderSelect = '1px 2px 13px #712'
     return (
         <section className={style.result}>
             <div>
@@ -7,7 +12,10 @@ export const Result = ()=>{
             </div>
             <hr></hr>
             <div className={style.gender}>
-                <img src="assets/img/Result/mulher.png" alt=""/>
+                {gender === 'woman' ? 
+                    <img src="assets/img/Result/mulher.png" alt=""/> : 
+                    <img src="assets/img/Result/homem.png" alt=""/>}
+                
             </div>
             <div>
                 <p>Seu indice de massa corporal é de:</p>
