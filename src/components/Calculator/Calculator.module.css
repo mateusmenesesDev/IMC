@@ -1,8 +1,13 @@
 
 .calculator {
     background-color: #FFF;
-    height: 550px;
-    padding: 70px 200px;
+    height: 100%;
+    padding: 0 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 
 .calculator .gender {
@@ -36,4 +41,11 @@
 .calculator .input-details {
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width:767px) {
+    .calculator{
+        height: 50vh;
+        width: 100vw;
+    }
 }

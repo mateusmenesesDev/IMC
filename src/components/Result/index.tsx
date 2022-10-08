@@ -11,7 +11,6 @@ interface Props{
     idealWeigth: number|undefined
 }
 export const Result = ({gender, imc, typeImc, setTypeImc, idealWeigth}:Props)=>{
-    const genderSelect = '1px 2px 13px #712'
     useEffect(()=>{
         setTypeImc(imcType(imc))
     }, [imc])

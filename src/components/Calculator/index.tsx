@@ -29,8 +29,8 @@ export const Calculator = ({man, woman, setWoman, setMan, setImc, setIdealWeigth
             <div className={style.gender}>
                 <p>Sexo:</p>
                 <div className={style.genderImages}>
-                    <ImMan size={90} className={style.icon} onClick={imageClick} style={{boxShadow: man ? genderSelect:''}}/>
-                    <ImWoman size={90} className={style.icon} onClick={imageClick} style={{boxShadow: woman ? genderSelect:''}}/>
+                    <ImMan size={70} className={style.icon} onClick={imageClick} style={{boxShadow: man ? genderSelect:''}}/>
+                    <ImWoman size={70} className={style.icon} onClick={imageClick} style={{boxShadow: woman ? genderSelect:''}}/>
                 </div>
             </div>
 
