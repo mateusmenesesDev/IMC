@@ -15,7 +15,7 @@
     display: flex;
     gap: 50px;
 }
-.calculator .gender img{
-    width: 100%;
+.calculator .gender .icon{
+    padding: 10px;
     border: 1px solid #CCC;
 }
