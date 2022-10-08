@@ -34,8 +34,18 @@ export const imcType = (imc:number) =>{
 
 export const idealWeight = (heigth:number, gender:string) =>{
     if (gender==='woman'){
-        return Number((((heigth)-100) * 0.85).toFixed(2))
+        const result = Number((((heigth)-100) * 0.85).toFixed(2))
+        if (result>0){
+            return result
+        } else {
+            return 0
+        } 
     } else {
-        return Number((((heigth)-100) * 0.90).toFixed(2))
+        const result = Number((((heigth)-100) * 0.90).toFixed(2))
+        if (result>0){
+            return result
+        } else {
+            return 0
+        } 
     }
 }
