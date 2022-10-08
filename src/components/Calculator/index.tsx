@@ -1,14 +1,17 @@
 import style from './Calculator.module.css'
 import {ImMan, ImWoman} from 'react-icons/im'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { imc } from '../../utils/imc'
 
 interface Props{
     man: boolean,
     woman: boolean,
     setWoman: React.Dispatch<React.SetStateAction<boolean>>,
-    setMan: React.Dispatch<React.SetStateAction<boolean>>
+    setMan: React.Dispatch<React.SetStateAction<boolean>>,
+    setImc: React.Dispatch<React.SetStateAction<number>>,
+    gender: string
 }
-export const Calculator = ({man, woman, setWoman, setMan}:Props)=>{
+export const Calculator = ({man, woman, setWoman, setMan, setImc, gender}:Props)=>{
     const[weigth, setWeigth] = useState<number>(0)
     const[height, setHeight] = useState<number>(0)
     function imageClick(){
@@ -16,6 +19,9 @@ export const Calculator = ({man, woman, setWoman, setMan}:Props)=>{
         setWoman(!woman)
     }
     const genderSelect = '1px 2px 13px #712'
+    useEffect(()=>{
+        setImc(imc({height,weigth}))
+    }, [height, weigth, gender])
     return (
         <section className={style.calculator}>
             <div className={style.gender}>

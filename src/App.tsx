@@ -7,6 +7,7 @@ function App() {
   const[woman, setWoman] = useState(true)
   const[man, setMan] = useState(false)
   const[gender, setGender] = useState('')
+  const[imc, setImc] = useState<number>(0)
   useEffect(()=>{
     if(woman){
       setGender('woman')
@@ -20,8 +21,8 @@ function App() {
   console.log('mulher:', woman)
   return (
     <div className={style.app}>
-      <Result gender={gender}/>
-      <Calculator man={man} woman={woman} setWoman={setWoman} setMan={setMan}/>
+      <Result gender={gender} imc={imc}/>
+      <Calculator man={man} woman={woman} setWoman={setWoman} setMan={setMan} setImc={setImc} gender={gender}/>
     </div>
   );
 }
