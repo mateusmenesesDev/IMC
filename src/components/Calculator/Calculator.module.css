@@ -1,10 +1,12 @@
+
 .calculator {
     background-color: #FFF;
-    padding: 100px 200px;
+    height: 550px;
+    padding: 70px 200px;
 }
 
 .calculator .gender {
-    width: 250px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -18,4 +20,19 @@
 .calculator .gender .icon{
     padding: 10px;
     border: 1px solid #CCC;
+}
+
+.calculator input {
+    width: 100%;
+}
+
+.calculator .input-title--details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.calculator .input-details {
+    display: flex;
+    justify-content: space-between;
 }

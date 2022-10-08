@@ -13,12 +13,27 @@ export const Calculator = ()=>{
             </div>
 
             <div>
-                <label>Peso:</label><br/>
-                <input type='number' min='0' max='200'></input>
+                <div className={style['input-title--details']}>
+                    <label>Peso:</label>
+                    <p>teste</p>
+                </div>
+                <input type='range' min='0' max='200'></input>
+                <div className={style['input-details']}>   
+                    <p>0 kg</p>
+                    <p>200kg</p>
+                </div>
+                
             </div>
             <div>
-                <label>Estatura</label><br/>
-                <input type='number' min='0' max='200'></input>
+                <div className={style['input-title--details']}>
+                    <label>Peso:</label>
+                    <p>teste</p>
+                </div>
+                <input type='range' min='0' max='200'></input>
+                <div className={style['input-details']}>   
+                    <p>0 kg</p>
+                    <p>200kg</p>
+                </div>
             </div>
         </section>
     )
