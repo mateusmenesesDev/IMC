@@ -1,0 +1,21 @@
+.calculator {
+    background-color: #FFF;
+    padding: 100px 200px;
+}
+
+.calculator .gender {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.calculator .gender .genderImages {
+    display: flex;
+    gap: 50px;
+}
+.calculator .gender img{
+    width: 100%;
+    border: 1px solid #CCC;
+}

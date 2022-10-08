@@ -1,6 +1,13 @@
+import { Calculator } from "./components/Calculator";
+import { Result } from "./components/Result";
+import style from './App.module.css'
+
 function App() {
   return (
-    <div><h1>teste</h1></div>
+    <div className={style.app}>
+      <Result/>
+      <Calculator/>
+    </div>
   );
 }
 
