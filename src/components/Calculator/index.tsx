@@ -1,14 +1,14 @@
 import style from './Calculator.module.css'
 import {ImMan, ImWoman} from 'react-icons/im'
 import { useEffect, useState } from 'react'
-import { idealWeight, imc } from '../../utils/imc'
+import { idealWeight, Iimc, imc } from '../../utils/imc'
 
 interface Props{
     man: boolean,
     woman: boolean,
     setWoman: React.Dispatch<React.SetStateAction<boolean>>,
     setMan: React.Dispatch<React.SetStateAction<boolean>>,
-    setImc: React.Dispatch<React.SetStateAction<number>>,
+    setImc: React.Dispatch<React.SetStateAction<{imc:number, type:string}|null>>,
     setIdealWeigth: React.Dispatch<React.SetStateAction<number|undefined>>,
     gender: string
 }

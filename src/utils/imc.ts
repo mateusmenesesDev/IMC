@@ -7,8 +7,8 @@ export interface Iimc{
     title: string,
     min:number,
     max:number,
-    imc?:number,
 }
+
 const imcTypes:Iimc[]=[
     {title:'Magreza', min:0, max:18.4},
     {title:'Normal', min:18.5, max:24.9},
@@ -18,18 +18,18 @@ const imcTypes:Iimc[]=[
 ]
 
 export const imc = ({weigth, height}:Props)=>{
-    const heigthSquare = Math.pow(height/100, 2)
-    const imc = Number((weigth/heigthSquare).toFixed(2))
-    return imc
-}
-
-export const imcType = (imc:number) =>{
-    for (let i in imcTypes){
-        if(imc>= imcTypes[i].min && imc<=imcTypes[i].max){
-            return imcTypes[i].title
+    let imc = Number((weigth/(Math.pow(height/100, 2))).toFixed(2))
+    let type = ''
+    imcTypes.forEach(getType=>{
+        if(imc>= getType.min && imc<=getType.max){
+            type = getType.title
         }
-    }
-    return null
+    })
+    if (imc.toString()==='NaN' || imc === Infinity){
+        return ({imc:0, type})
+    } else {
+        return ({imc, type})
+    } 
 }
 
 export const idealWeight = (heigth:number, gender:string) =>{

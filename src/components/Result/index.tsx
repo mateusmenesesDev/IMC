@@ -1,23 +1,18 @@
 import { type } from 'os'
 import { useEffect } from 'react'
-import { imcType } from '../../utils/imc'
+import { Iimc} from '../../utils/imc'
 import style from './Result.module.css'
 
 interface Props{
     gender:string,
-    imc:number,
-    typeImc: string|null,
-    setTypeImc: React.Dispatch<React.SetStateAction<string|null>>,
+    imc:{imc:number, type:string}|null,
     idealWeigth: number|undefined
 }
-export const Result = ({gender, imc, typeImc, setTypeImc, idealWeigth}:Props)=>{
-    useEffect(()=>{
-        setTypeImc(imcType(imc))
-    }, [imc])
+export const Result = ({gender, imc, idealWeigth}:Props)=>{
     return (
         <section className={style.result}>
             <div>
-                <h1>{typeImc}</h1>
+                <h1>{imc?.type}</h1>
             </div>
             <div className={style.gender}>
                 {gender === 'woman' ? 
@@ -26,7 +21,7 @@ export const Result = ({gender, imc, typeImc, setTypeImc, idealWeigth}:Props)=>{
             </div>
             <div>
                 <p>Seu indice de massa corporal é de:</p>
-                <h3>{imc!==Infinity && imc.toString()!== 'NaN' ? imc : '0'}kg/m2</h3>
+                <h3>{imc?.imc}kg/m2</h3>
             </div>
             <div>
                 <p>Peso recomendado:</p>
