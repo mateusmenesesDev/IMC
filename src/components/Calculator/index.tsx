@@ -53,8 +53,8 @@ export const Calculator = ({man, woman, setWoman, setMan, setImc, setIdealWeigth
                 </div>
                 <input type='range' min='0' max='200' value={height} onChange={event=>setHeight(event.target.valueAsNumber)}></input>
                 <div className={style['input-details']}>   
-                    <p>0 kg</p>
-                    <p>200kg</p>
+                    <p>0 cm</p>
+                    <p>200cm</p>
                 </div>
             </div>
 
